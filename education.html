@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafiy's Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Logo/eeveelogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+          <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html" class="navhighlight">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pokemon.html">Pokemon</a></li>
+              </ul>
+          </nav>
+    </header>
+
+    <main> 
+        <!-- SKBSP -->
+         <div class="school1">
+                <img id="schoolImage1" src="images/school/skbsplogo.png" data-full="images/school/skbsp.png" alt="Sekolah Kebangsaan Bandar Seri Putra">
+            <div>
+                <h2><b>Sekolah Kebangsaan Bandar Seri Putra</b></h2>
+                <p class="years">2012-2018</p>
+                <p id="skDesc"><em><sub>Studying and Sports</sub></em></p>
+            </div>
+         </div>
+
+         <!-- SMKBSP -->
+         <div class="school2">
+            <div>
+                <h2><b>Sekolah Menengah Kebangsaan Bandar Seri Putra</b></h2>
+                <p class="years">2019-2024</p>
+                <p id="smkbspDesc"><em><sup>Streaming in Accounting and Constitution</sup></em></p>
+            </div>
+                <img id="schoolImage2" src="images/school/smkbsplogo.png" data-full="images/school/smkbspPic.jpg" alt="Sekolah Menengah Kebangsaan Bandar Seri Putra">
+         </div>
+
+         <!-- UiTM -->
+         <div class="school3">
+                <img id="schoolImage3" src="images/school/uitmlogo.png" data-full="images/school/segamatpic.jpg" alt="UiTM Kampus Segamat">
+            <div>
+                <h2><bdo dir="rtl">tamageS supmaK ARAM igolonkeT itisrevinU</bdo></h2>
+                <p class="years">2025-2027</p> 
+                <p id="uitmDesc"><em>Diploma in Information Management</em></p>
+            </div>
+         </div>
+
+         <!-- the modal for school image-->
+         <div id="schoolmodal" class="schoolPicture">
+            <!-- close button -->
+            <span class="close">&times;</span>
+            <!-- the image -->
+            <img class="school-content" id="img01">
+            <!-- caption variable -->
+            <div id="caption"></div>
+         </div>
+
+        <div class="tableCard">
+            <table class="table">
+                <caption>My Academic Qualifications</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">EDUCATION LEVEL</th>
+                        <th scope="col">INSTITUTION</th>
+                        <th scope="col">YEARS</th>
+                        <th scope="col">ACHIEVEMENT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Primary School</th>
+                        <td>SK Bandar Seri Putra</td>
+                        <td><b>2013-2018</b></td>
+                        <td>Completed UPSR and Achieve Medal on Co-curricular Sports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Secondary School</th>
+                        <td>SMK Bandar Seri Putra</td>
+                        <td><b>2019-2023</b></td>
+                        <td>SPM Graduate with <b>8+</b></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">University Diploma</th>
+                        <td>Universiti Teknologi MARA (UiTM)</td>
+                        <td><b>2024-2027</b></td>
+                        <td>Diploma with CGPA <b>4.00</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // scrip to make school image appear when clicking on the logo
+        var modal = document.getElementById("schoolmodal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        // funtion logo that sets logo.alt, and logo dataset for the picture
+        function openModal(logo) {
+            modal.style.display = "block";
+            modalImg.src = logo.dataset.full;
+            captionText.innerHTML = logo.alt;
+        }
+
+        // each school logo its own separate picture, this is hard
+        // this skbsp
+        document.getElementById("schoolImage1").onclick = function () {
+            openModal(this);
+        }
+        // this smkbsp
+        document.getElementById("schoolImage2").onclick = function () {
+            openModal(this);
+        }
+        // this uitm
+        document.getElementById("schoolImage3").onclick = function () {
+            openModal(this);
+        }
+
+
+        // x button on modal picture
+            document.getElementsByClassName("close")[0].onclick = function() {
+                modal.style.display = "none";
+        };
+    </script>
+
+    <footer>
+        <h2>&copy; 2026 Muhammad Hafiy</h2>
+    </footer>
+</body>
+</html>

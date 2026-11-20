@@ -1,0 +1,1022 @@
+/* color for my website */
+:root {
+    --background-cream: #FBF8F1;
+    --card-white: #FFFFFF;   
+    --text-dark: #2C2520;     
+    --text-muted: #6E6259;    
+    --terracotta: #B85D3B;   
+    --forest: #3A5A40;       
+    --gold: #D4A359;           
+    --border-light: #E6DEC8;     
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-cream);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* header and footer background color */
+header, footer {
+    background-color: var(--card-white)
+}
+
+/* header */
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 24px auto;
+    padding: 14px 28px;
+    border-radius: 70px;
+    border: 1.5px solid var(--border-light);
+}
+
+/* nav button flex so the nav button sits on the right */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+    background-color: var(--background-cream);
+    padding: 6px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border-light);
+}
+
+/* Inline block makes it order from left to right */
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 9px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--forest);
+    background-color: rgba(37, 41, 38, 0.1);
+    transform: translateY(-1px);
+}
+
+nav ul li a.navhighlight,
+nav ul li a.navhighlight:hover {
+    background-color: var(--terracotta);
+    color: var(--card-white);
+    box-shadow: 0 4px 12px rgba(53, 62, 55, 0.1);
+}
+
+/* footer */
+footer {
+    background-color: var(--text-dark);
+    color: var(--background-cream);
+    text-align: center;
+    padding: 24px;
+    margin: 40px 0px 0px 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top: 4px solid var(--gold)
+}
+
+/* HOMEPAGE */
+
+/* BIODATA */
+.biodata {
+    max-width: 1300px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 70px;
+}
+
+.biodataInfo h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.biodataInfo h2 span {
+    color: var(--terracotta);
+}
+
+.biodataInfo p {
+    font-size: 20px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.biodataInfo h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    color: var(--forest);
+    margin-bottom: 10px;
+}
+
+.biodataInfo ol {
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 25px;
+    padding: 12px 28px;
+}
+
+/* grid to gap the head and the child, transition on hover */
+.biodataInfo li {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border-bottom: 1px dashed var(--border-light);
+    font-size: 16px;
+    color: var(--text-dark);
+    transition: transform 0.25s ease, padding-left 0.25s ease;
+}
+
+/* last li doesnt have border-bottom */
+.biodataInfo li:last-child {
+    border-bottom: none;
+}
+
+/* translateX on padding-left so it moves to the right */
+.biodataInfo li:hover {
+    background-color: var(--background-cream);
+    transform: translateX(10px);
+}
+
+.biodataInfo li strong {
+    font-weight: 900;
+    color: var(--terracotta);
+    font-size: 16px;
+}
+
+.biodataInfo li a {
+    color: var(--forest);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.biodataInfo li a:hover {
+    color: var(--terracotta);
+    text-decoration: underline;
+}
+
+
+/* picture of me */
+.PicOfMe figure {
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 28px;
+    padding: 20px 20px 24px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.PicOfMe figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+.PicOfMe img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 200px 200px 20px 20px;
+    border: 2px solid var(--border-light);
+}
+
+.PicOfMe figcaption {
+    text-align: center;
+    margin-top: 18px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    color: var(--text-dark);
+}
+
+/* EXPERIENCE */
+.internship {
+    max-width: 1300px;
+    margin: 25px auto;
+    padding: 0 24px;
+}
+
+.internship h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.internship h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--terracotta);
+    padding-bottom: 15px;
+}
+
+/* i cant use margin, dont know why, thus i use flex column to gap it */
+.intern {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.intern img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 28px;
+    border: 6px solid var(--card-white);
+    box-shadow: 0 18px 40px rgba(44, 37, 32, 0.08);
+    transition: transform 0.35s ease, border-color 0.3s ease;
+}
+
+.intern img:hover {
+    transform: scale(1.05);
+    border-color: var(--gold);
+}
+
+/* grid to make 4 column like inline-block */
+.internDetails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card UL */
+.detailCard {
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-top: 4px solid var(--terracotta);
+    border-radius: 20px;
+    padding: 22px 20px;
+    transition: transform 0.25s ease;
+}
+
+.detailCard:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--terracotta);
+}
+
+.internDetails dt {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: var(--forest);
+    margin-bottom: 8px;
+    font-family: 'Fraunces', serif;;
+}
+
+.internDetails dd {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+/* Card for "What I've Learned" */
+.learned {
+    grid-column: 1 / -1;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 20px;
+    padding: 32px 36px;
+}
+
+.learned h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    color: var(--forest);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.learned ul {
+    list-style-type: lower-roman;
+    margin-left: 50px;
+}
+
+.learned li {
+    padding: 12px 10px;
+    border-radius: 10px;
+    border-bottom: 1.5px dashed var(--border-light);
+    font-size: 20px;
+    color: var(--text-dark);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    letter-spacing: 1.5px;
+}
+
+.learned li:hover {
+    background-color: var(--background-cream);
+    transform: translateX(10px);
+}
+
+.learned li:last-child {
+    border-bottom: none;
+}
+
+/* EDUCATION */
+.school1, .school2, .school3 {
+    max-width: 1300px;
+    margin: 32px auto;
+    padding: 32px 36px;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 25px;
+    display: grid;
+    align-items: center;
+    gap: 35px;
+    transition: transform 0.3s ease, border-top 0.3s ease, border-bottom 0.3s ease, border-right 0.25s ease;
+}
+
+/* Logo on the left (SKBSP & UiTM) */
+.school1, .school3 {
+    grid-template-columns: 0.2fr 1fr;
+    border-left: 6px solid var(--forest);
+}
+
+/* Logo on the right (SMKBSP) */
+.school2 {
+    grid-template-columns: 1fr 0.2fr;
+    border-right: 6px solid var(--forest);
+}
+
+.school1:hover, .school3:hover {
+    transform: translateY(-10px);
+    border-top: 2px solid var(--terracotta);
+    border-bottom: 2px solid var(--terracotta);
+    border-right: 2px solid var(--terracotta);
+}
+
+.school2:hover {
+    transform: translateY(-10px);
+    border-left: 2px solid var(--terracotta);
+    border-top: 2px solid var(--terracotta);
+    border-bottom: 2px solid var(--terracotta);
+}
+
+.school1 img, .school2 img, .school3 img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    background-color: var(--background-cream);
+    padding: 16px;
+    border-radius: 22px;
+    border: 1.5px solid var(--border-light);
+    cursor: pointer;
+    margin: 0 auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.school1 img:hover, .school2 img:hover, .school3 img:hover {
+    transform: scale(1.1);
+    border-color: var(--forest);
+}
+
+.school1 h2, .school2 h2, .school3 h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+/* years i attend school */
+.years {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--forest);
+    background-color: var(--background-cream);
+    border: 1.5px solid var(--border-light);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+#skDesc sub, #smkbspDesc sup, #uitmDesc {
+    font-size: 25px;
+    color: var(--text-muted);
+}
+
+/* school picture pop when click on the logo, from w3school */
+.schoolPicture {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 37, 32, 0.85);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* this is modal content from script, picture of school/uni */
+.school-content {
+    max-width: 780px;
+    width: 90%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 24px;
+    border: 6px solid var(--card-white);
+    margin: auto;
+    display: block;
+    transform: scale(1.1);
+}
+
+/* caption of modal picture */
+#caption {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--background-cream);
+    margin-top: 35px;
+}
+
+/* close button */
+.close {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    color: var(--background-cream);
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close:hover {
+    color: var(--gold);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.school-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* table */
+.tableCard {
+    max-width: 1300px;
+    margin: 40px auto;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 30px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+}
+
+.table caption {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 15px;
+    background-color: var(--card-white);
+    border-radius: 40px;
+}
+
+.table thead th {
+    background-color: var(--forest);
+    color: var(--card-white);
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 16px 28px;
+}
+
+.table tbody th,
+.table tbody td {
+    padding: 20px 28px;
+    border-bottom: 1.5px dashed var(--border-light);
+}
+
+.table tbody th {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--terracotta);
+    font-size: 20px;
+}
+
+.table tbody td {
+    color: var(--text-dark);
+}
+
+.table thead th:nth-child(3),
+.table tbody td:nth-child(3) {
+    white-space: nowrap;
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--background-cream);
+    transform: translateX(6px);
+}
+
+.table tbody td:nth-child(4) {
+    letter-spacing: 1.5px;
+}
+
+/* FAMILY */
+.family {
+    max-width: 1300px;
+    margin: 25px auto;
+}
+
+.family h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.family h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--terracotta);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* first family pic */
+.family figure {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 14px 14px 22px ;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 30px;
+}
+
+
+.family img {
+    width: 960px;
+    height: 540px;
+    display: block;
+    border-radius: 18px;
+}
+
+.family figcaption {
+    text-align: center;
+    margin-top: 18px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--text-dark);
+}
+
+.family figcaption strong {
+    color: var(--terracotta);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 0 5px 0 10px;
+    border-right: 2px solid var(--forest);
+    border-radius: 20px;
+    border-left: 2px solid var(--forest);
+}
+
+/* family members and sec pic grid column 1fr 1fr */
+.familyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px auto;
+    max-width: 1300px;
+    gap: 50px;
+}
+
+.familyCard h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+/* family members */
+.familyCard ul {
+    list-style: none;
+    border: 1.5px solid var(--border-light);
+    border-radius: 30px;
+    background-color: var(--card-white);
+    padding: 16px 28px;
+}
+
+/* desc on family members */
+.familyCard li {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border-bottom: 1px dashed var(--border-light);
+    font-size: 16px;
+    color: var(--text-dark);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.familyCard li:last-child {
+    border-bottom: none;
+}
+
+.familyCard li:hover {
+    background-color: var(--background-cream);
+    transform: translateX(6px);
+}
+
+/* this to highlight the name whenever click on the image map */
+.familyCard li:target {
+    background-color: #FDF3DC;
+    border-left: 4px solid var(--terracotta);
+    transform: translateX(8px);
+    animation: fading 2s ease forwards;
+}
+
+/* animation after the image map, its fading..*/
+@keyframes fading {
+    0% {
+        background-color: #FDF3DC;
+        border-left: 4px solid var(--terracotta);
+        box-shadow: 0 6px 18px rgba(184, 93, 59, 0.14);
+        transform: translateX(8px);
+    }
+    50% {
+        background-color: #FDF3DC;
+        border-left: 4px solid var(--terracotta);
+        box-shadow: 0 6px 18px rgba(184, 93, 59, 0.14);
+        transform: translateX(8px);
+    }
+    100% {
+        background-color: transparent;
+        border-left: 0 solid transparent;
+        box-shadow: none;
+        transform: translateX(0);
+    }
+}
+
+.familyCard strong {
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+.siblings {
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: 30px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.siblings:hover {
+    transform: scale(1.05);
+    border: 1.5px solid var(--terracotta)
+}
+
+
+.siblings img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.siblings figcaption {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--forest);
+    background-color: var(--background-cream);
+    border: 1.5px solid var(--border-light);
+    padding: 5px 14px;
+    border-radius: 30px;
+    color: var(--text-dark);
+}
+
+/* GALLERY */
+/* grid and grid template areas to make it look like bento */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 12px;
+    grid-template-areas:
+    "pic3  pic3  pic3  pic1"
+    "pic3  pic3  pic3  pic1"
+    "pic2  pic6  pic6  pic6"
+    "pic2  pic6  pic6  pic6"
+    "pic4  pic5  pic7  pic9"
+    "pic4  pic5  pic7  pic9"
+    "pic12 pic12 pic12 pic10"
+    "pic12 pic12 pic12 pic10"
+    "pic11 pic8  pic8  pic13"
+    "pic11 pic8  pic8  pic13";
+    margin: 0 30px;
+    font-family: 'Fraunces', serif;
+}
+
+.galleryPic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1.5px solid var(--border-light);
+    padding: 10px 10px;
+    background-color: var(--card-white);
+    transition: border 0.1s ease;
+}
+
+/* when hover, change border color*/
+.galleryPic img:hover, .galleryPic video:hover {
+    border: 2.5px solid var(--terracotta)
+}
+
+/* relative so description stays in place */
+.galleryPic {
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--background-cream);
+    border-radius: 20px;
+    color: var(--text-dark);
+    padding: 6px 8px;
+    border: 1.5 solid var(--border-light);
+}
+
+.descriptionVideo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--background-cream);
+    border-radius: 20px;
+    color: var(--text-dark);
+    padding: 6px 8px;
+    border: 1.5 solid var(--border-light);
+}
+
+.galleryPic video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    padding: 10px 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* POKEMON */
+/* header for each region */
+#kanto, #Johto, #Hoenn, #Sinnoh, #Unova, #Kalos, #Alola, #Galar, #Paldea {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 46px;
+    margin-top: 70px;
+    font-family: "Fraunces", serif;
+}
+
+/* column for each images */
+/* there's 3 column in the middle using 5 grid tracks */
+.pokemonContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* make the card relative so the overlay name is absolute */
+.pokemon1, .pokemon2, .pokemon3, .pokemon4, .pokemon5, .pokemon6, .pokemon7, 
+.pokemon8, .pokemon9, .pokemon10, .pokemon11, .pokemon12, .pokemon13, .pokemon14, 
+.pokemon15, .pokemon16, .pokemon17, .pokemon18, .pokemon19, .pokemon20, .pokemon21, 
+.pokemon22, .pokemon23, .pokemon24, .pokemon25, .pokemon26, .pokemon27 {
+    position: relative;
+    margin-bottom: 50px;
+    font-family: "Fraunces", serif;
+}
+
+/* first starter in each region starts at column 2 to center the 3 cards */
+.pokemon1, .pokemon4, .pokemon7, .pokemon10, 
+.pokemon13, .pokemon16, .pokemon19, .pokemon22, .pokemon25 {
+    grid-column-start: 2;
+}
+
+/* each pokemon from the left, border color */
+.pokemon1 img, .pokemon4 img, .pokemon7 img, .pokemon10 img, .pokemon13 img, 
+.pokemon16 img, .pokemon19 img, .pokemon22 img, .pokemon25 img {
+    border-top: 1.5px solid var(--border-light);
+    border-left: 1.5px solid var(--border-light);
+    border-bottom: 1.5px solid var(--border-light);
+    background-color: var(--card-white);
+    padding: 12px 1px 12px 12px;
+}
+
+/* middle card border */
+.pokemon2 img, .pokemon5 img, .pokemon8 img, .pokemon11 img, .pokemon14 img, .pokemon17 img, 
+.pokemon20 img, .pokemon23 img, .pokemon26 img {
+    border-top: 1.5px solid var(--border-light);
+    border-bottom: 1.5px solid var(--border-light);
+    background-color: var(--card-white);
+    padding: 12px 1px 12px 1px;
+}
+
+/* right card border */
+.pokemon3 img, .pokemon6 img, .pokemon9 img, .pokemon12 img, .pokemon15 img, .pokemon18 img, 
+.pokemon21 img, .pokemon24 img, .pokemon27 img {
+    border-top: 1.5px solid var(--border-light);
+    border-right: 1.5px solid var(--border-light);
+    border-bottom: 1.5px solid var(--border-light);
+    background-color: var(--card-white);
+    padding: 12px 12px 12px 1px;
+}
+
+.pokemonContainer img {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* when hover, become big with ease so it looks smooth */
+.pokemonContainer img:hover {
+    transform: scale(1.15);
+    border: 2px solid var(--border-light);
+    padding: 12px 12px;
+}
+
+/* when hover, bring the card layer up above neighbors */
+.pokemonContainer div:hover {
+    z-index: 1;
+}
+
+/* pokemon names pill */
+.name1, .name2, .name3,.name4, .name5, .name6,.name10, .name11, .name12,
+.name13, .name14, .name15, .name16, .name17, .name18,.name19, .name20, .name21,
+.name22, .name23, .name24,.name25, .name26, .name27 {
+    text-align: center;
+    color: var(--text-muted);
+    background-color: var(--card-white);
+    border-radius: 50px;
+    border: 4px solid var(--border-light);
+    margin: 5px 10px;
+    padding: 8px 22px;
+    font-size: 32px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px;
+    opacity: 0; /* invisible until hover */
+    transition: 0.3s ease;
+}
+
+/* opacity 1 so the name appears when hover */
+.pokemonContainer div:hover .overlay {
+    opacity: 1;
+}
+
+/* pokemon artwork credit */
+#artwork {
+    text-align: right;
+    margin-right: 24px;
+    margin-bottom: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--text-muted);
+}
+
+#artwork a {
+    text-decoration: none;
+    color: var(--forest);
+    margin-left: 5px;
+}
+
+#artwork a:hover {
+    color: var(--terracotta);
+    text-decoration: underline;
+}
+
+/* HOMEPAGE */
+.top {
+    max-width: 1300px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.intro h2 {
+    font-size: 60px;
+    font-family: 'Fraunces', serif;
+}
+
+.intro h2 b {
+    font-weight: 700px;
+    color: var(--terracotta);
+    letter-spacing: 1.5px;
+}
+
+.intro p {
+    font-size: 20px;
+    font-family: 'Fraunces', serif;
+}
+
+.topright img {
+    width: 100%;
+    border-radius: 40px;
+    padding: 10px 10px;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light)
+}
+
+.topright {
+    margin: 50px auto;
+    margin-left: 80px;
+}
+
+.h3 {
+    font-size: 60px;
+    font-family: 'Fraunces', serif;
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.heroCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.card {
+    max-width: 1300px;
+    padding: 100px 80px;
+    background-color: var(--card-white);
+    border: 1.5px solid var(--border-light);
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 40px;
+    margin: 0 auto;
+    display: block;
+}
