@@ -77,6 +77,12 @@ nav ul li a.navhighlight:hover {
     box-shadow: 0 4px 12px rgba(53, 62, 55, 0.1);
 }
 
+/* audio bar */
+.audio {
+    font-size: 5px;
+    margin-right: 20px;
+}
+
 /* footer */
 footer {
     background-color: var(--text-dark);
@@ -564,6 +570,16 @@ footer {
     letter-spacing: 1.5px;
 }
 
+.table tr td a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.table tr td a:hover {
+    font-weight: 700;
+    color: var(--forest);
+}
+
 /* FAMILY */
 .family {
     max-width: 1300px;
@@ -959,10 +975,10 @@ footer {
 
 /* HOMEPAGE */
 .top {
-    max-width: 1300px;
+    max-width: 1000px;
     margin: 35px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr;
     align-items: center;
     gap: 80px;
 }
@@ -981,14 +997,34 @@ footer {
 .intro p {
     font-size: 20px;
     font-family: 'Fraunces', serif;
+    margin-bottom: 20px;
 }
 
-.topright img {
-    width: 100%;
-    border-radius: 40px;
-    padding: 10px 10px;
-    background-color: var(--card-white);
-    border: 1.5px solid var(--border-light)
+.intro p strong {
+    color: var(--terracotta);
+}
+
+.topright button {
+    padding: 14px 32px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--card-white);
+    background-color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+    border-radius: 40px;                       
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(184, 93, 59, 0.14);
+    transition: transform 0.25s ease;
+}
+
+.topright button:hover {
+    transform: translateY(-3px);
+}
+
+.topright button:active {
+    border: 1.5px solid var(--border-light);
+    color: var(--text-dark);
 }
 
 .topright {
@@ -1000,23 +1036,48 @@ footer {
     font-size: 60px;
     font-family: 'Fraunces', serif;
     max-width: 1300px;
-    margin: 100px auto;
+    margin: 10px auto;
+    margin-bottom: 50px;
+}
+
+.h3 strong {
+    color: var(--terracotta);
 }
 
 .heroCard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+    gap: 70px;
+    max-width: 1300px;
+    margin: 35px auto;
+    text-align: center;
+    font-family: 'Fraunces', serif;;
 }
 
 .card {
     max-width: 1300px;
-    padding: 100px 80px;
+    margin: 0 auto;
+    padding: 50px 80px;
     background-color: var(--card-white);
     border: 1.5px solid var(--border-light);
     color: var(--text-dark);
     text-decoration: none;
     border-radius: 40px;
-    margin: 0 auto;
-    display: block;
+    box-shadow: 0 6px 18px rgba(184, 93, 59, 0.14);
+    transition: transform 0.25s ease, border-top 0.25s ease, border-bottom 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-35px);
+    border-top: 4px solid var(--terracotta);
+    border-bottom: 4px solid var(--terracotta)
+}
+
+.icon {
+    width: 80px;
+    align-items: center;
+}
+
+.heroCard h3 {
+    margin-top: 15px
 }
