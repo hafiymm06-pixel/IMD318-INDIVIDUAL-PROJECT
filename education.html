@@ -29,6 +29,9 @@
                 <li><a href="pokemon.html">Pokemon</a></li>
               </ul>
           </nav>
+          <div>
+            <button type="button" id="myBtn">Show time</button>
+        </div>
     </header>
 
     <main> 
@@ -139,10 +142,15 @@
             document.getElementsByClassName("close")[0].onclick = function() {
                 modal.style.display = "none";
         };
+
+        // noti and time script
+        document.getElementById("myBtn").addEventListener("click", function () {
+        alert("The time now is " + new Date().toLocaleString("en-MY"));
+      });
     </script>
 
     <footer>
-        <h2>&copy; 2026 Muhammad Hafiy</h2>
+        <h2>Made purely by one and only <strong>Hafiy</strong></h2>
     </footer>
 </body>
 </html>
