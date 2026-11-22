@@ -48,7 +48,6 @@ nav ul {
     border: 1.5px solid var(--border-light);
 }
 
-/* Inline block makes it order from left to right */
 nav ul li a {
     text-decoration: none;
     color: var(--text-muted);
@@ -505,6 +504,16 @@ footer strong {
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
+}
+
+.school1Link, .school2Link, .school3Link {
+    text-decoration: none;
+}
+
+/* animation when click on the anchor of school link */
+tr:target th,
+tr:target td {
+    animation: fading 2s ease forwards;
 }
 
 /* table */
